@@ -61,6 +61,26 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${classInstance?.courseClass}">
+				<li class="fieldcontain">
+					<span id="courseClass-label" class="property-label"><g:message code="class.courseClass.label" default="Course Class" /></span>
+					
+						<span class="property-value" aria-labelledby="courseClass-label"><g:link controller="course" action="show" id="${classInstance?.courseClass?.id}">${classInstance?.courseClass?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${classInstance?.registrationSheets}">
+				<li class="fieldcontain">
+					<span id="registrationSheets-label" class="property-label"><g:message code="class.registrationSheets.label" default="Registration Sheets" /></span>
+					
+						<g:each in="${classInstance.registrationSheets}" var="r">
+						<span class="property-value" aria-labelledby="registrationSheets-label"><g:link controller="registrationSheet" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

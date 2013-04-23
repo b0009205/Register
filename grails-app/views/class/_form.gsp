@@ -43,3 +43,28 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: classInstance, field: 'courseClass', 'error')} required">
+	<label for="courseClass">
+		<g:message code="class.courseClass.label" default="Course Class" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="courseClass" name="courseClass.id" from="${uk.ac.shu.webarch.eregister.Course.list()}" optionKey="id" required="" value="${classInstance?.courseClass?.id}" class="many-to-one"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: classInstance, field: 'registrationSheets', 'error')} ">
+	<label for="registrationSheets">
+		<g:message code="class.registrationSheets.label" default="Registration Sheets" />
+		
+	</label>
+	
+<ul class="one-to-many">
+<g:each in="${classInstance?.registrationSheets?}" var="r">
+    <li><g:link controller="registrationSheet" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="registrationSheet" action="create" params="['class.id': classInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'registrationSheet.label', default: 'RegistrationSheet')])}</g:link>
+</li>
+</ul>
+
+</div>
+

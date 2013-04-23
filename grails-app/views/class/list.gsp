@@ -30,6 +30,8 @@
 					
 						<g:sortableColumn property="className" title="${message(code: 'class.className.label', default: 'Class Name')}" />
 					
+						<th><g:message code="class.courseClass.label" default="Course Class" /></th>
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -41,6 +43,8 @@
 						<td>${fieldValue(bean: classInstance, field: "classInstructor")}</td>
 					
 						<td>${fieldValue(bean: classInstance, field: "className")}</td>
+					
+						<td>${fieldValue(bean: classInstance, field: "courseClass")}</td>
 					
 					</tr>
 				</g:each>

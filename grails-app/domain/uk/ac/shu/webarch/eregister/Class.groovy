@@ -5,9 +5,13 @@ String className
 Date classDate
 Instructorgrails classInstructor
 
+Course courseClass
+
 Set classesEnrolled
-static hasMany = [classesEnrolled: Enrollment]
-static mappedBy = [classesEnrolled: "classEnrollment"]
+Set registrationSheets
+
+static hasMany = [classesEnrolled: Enrollment, registrationSheets: RegistrationSheet]
+static mappedBy = [classesEnrolled: "classEnrollment", registrationSheets: "theClass"]
     static constraints = {
     }
 }
