@@ -36,7 +36,7 @@
 				<li class="fieldcontain">
 					<span id="classInstructor-label" class="property-label"><g:message code="class.classInstructor.label" default="Class Instructor" /></span>
 					
-						<span class="property-value" aria-labelledby="classInstructor-label"><g:link controller="instructorgrails" action="show" id="${classInstance?.classInstructor?.id}">${classInstance?.classInstructor?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="classInstructor-label"><g:link controller="instructor" action="show" id="${classInstance?.classInstructor?.id}">${classInstance?.classInstructor?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

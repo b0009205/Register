@@ -32,11 +32,29 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${studentInstance?.studentId}">
+				<li class="fieldcontain">
+					<span id="studentId-label" class="property-label"><g:message code="student.studentId.label" default="Student Id" /></span>
+					
+						<span class="property-value" aria-labelledby="studentId-label"><g:fieldValue bean="${studentInstance}" field="studentId"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${studentInstance?.studentName}">
 				<li class="fieldcontain">
 					<span id="studentName-label" class="property-label"><g:message code="student.studentName.label" default="Student Name" /></span>
 					
 						<span class="property-value" aria-labelledby="studentName-label"><g:fieldValue bean="${studentInstance}" field="studentName"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${studentInstance?.studentRegister}">
+				<li class="fieldcontain">
+					<span id="studentRegister-label" class="property-label"><g:message code="student.studentRegister.label" default="Student Register" /></span>
+					
+						<span class="property-value" aria-labelledby="studentRegister-label"><g:link controller="registerEntry" action="show" id="${studentInstance?.studentRegister?.id}">${studentInstance?.studentRegister?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

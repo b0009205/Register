@@ -15,7 +15,7 @@
 		<g:message code="class.classInstructor.label" default="Class Instructor" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="classInstructor" name="classInstructor.id" from="${uk.ac.shu.webarch.eregister.Instructorgrails.list()}" optionKey="id" required="" value="${classInstance?.classInstructor?.id}" class="many-to-one"/>
+	<g:select id="classInstructor" name="classInstructor.id" from="${uk.ac.shu.webarch.eregister.Instructor.list()}" optionKey="id" required="" value="${classInstance?.classInstructor?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: classInstance, field: 'className', 'error')} ">

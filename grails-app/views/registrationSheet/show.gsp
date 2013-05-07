@@ -23,6 +23,17 @@
 			</g:if>
 			<ol class="property-list registrationSheet">
 			
+				<g:if test="${registrationSheetInstance?.regEntries}">
+				<li class="fieldcontain">
+					<span id="regEntries-label" class="property-label"><g:message code="registrationSheet.regEntries.label" default="Reg Entries" /></span>
+					
+						<g:each in="${registrationSheetInstance.regEntries}" var="r">
+						<span class="property-value" aria-labelledby="regEntries-label"><g:link controller="registerEntry" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${registrationSheetInstance?.registerSheetDate}">
 				<li class="fieldcontain">
 					<span id="registerSheetDate-label" class="property-label"><g:message code="registrationSheet.registerSheetDate.label" default="Register Sheet Date" /></span>

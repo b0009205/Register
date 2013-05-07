@@ -10,12 +10,28 @@
 	<g:textField name="studentCourse" value="${studentInstance?.studentCourse}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'studentId', 'error')} ">
+	<label for="studentId">
+		<g:message code="student.studentId.label" default="Student Id" />
+		
+	</label>
+	<g:textField name="studentId" value="${studentInstance?.studentId}"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'studentName', 'error')} ">
 	<label for="studentName">
 		<g:message code="student.studentName.label" default="Student Name" />
 		
 	</label>
 	<g:textField name="studentName" value="${studentInstance?.studentName}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'studentRegister', 'error')} required">
+	<label for="studentRegister">
+		<g:message code="student.studentRegister.label" default="Student Register" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="studentRegister" name="studentRegister.id" from="${uk.ac.shu.webarch.eregister.RegisterEntry.list()}" optionKey="id" required="" value="${studentInstance?.studentRegister?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'studentYear', 'error')} ">

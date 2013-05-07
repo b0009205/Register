@@ -2,6 +2,23 @@
 
 
 
+<div class="fieldcontain ${hasErrors(bean: registrationSheetInstance, field: 'regEntries', 'error')} ">
+	<label for="regEntries">
+		<g:message code="registrationSheet.regEntries.label" default="Reg Entries" />
+		
+	</label>
+	
+<ul class="one-to-many">
+<g:each in="${registrationSheetInstance?.regEntries?}" var="r">
+    <li><g:link controller="registerEntry" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="registerEntry" action="create" params="['registrationSheet.id': registrationSheetInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'registerEntry.label', default: 'RegisterEntry')])}</g:link>
+</li>
+</ul>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: registrationSheetInstance, field: 'registerSheetDate', 'error')} required">
 	<label for="registerSheetDate">
 		<g:message code="registrationSheet.registerSheetDate.label" default="Register Sheet Date" />
