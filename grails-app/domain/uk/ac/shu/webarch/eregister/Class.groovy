@@ -3,7 +3,7 @@ package uk.ac.shu.webarch.eregister
 class Class {
 String className
 Date classDate
-Instructorgrails classInstructor
+Instructor classInstructor
 
 Course courseClass
 
