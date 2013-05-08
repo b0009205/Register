@@ -17,10 +17,17 @@ instructorName:'Matthew Love',
 instructorRoom:'9327', 
 instructorTelephone:'011442753450').save();
 
-def webArch_course=Course.findByCourseId('w345') ?: new Course
-(courseId:'w345', 
-courseName:'Web Architecture', 
+def IMwA_course=Course.findByCourseId('w345') ?: new Course
+(courseId:'ima2', 
+courseName:'Interactive Media with Animation', 
 courseYear:'2').save();
+
+def webArch_class=Class.findByClassId('wa22') ?: new Class
+(classId:'wa22', 
+className:'Web Architecture', 
+classDate:'Monday@4',
+classInstructor: 'Ian Ibbotson').save();
+
 
     }
     def destroy = {

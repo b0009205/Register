@@ -1,6 +1,7 @@
 package uk.ac.shu.webarch.eregister
 
 class Class {
+String classId
 String className
 Date classDate
 Instructor classInstructor
