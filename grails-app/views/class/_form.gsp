@@ -2,12 +2,12 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: classInstance, field: 'classDate', 'error')} required">
-	<label for="classDate">
-		<g:message code="class.classDate.label" default="Class Date" />
-		<span class="required-indicator">*</span>
+<div class="fieldcontain ${hasErrors(bean: classInstance, field: 'classId', 'error')} ">
+	<label for="classId">
+		<g:message code="class.classId.label" default="Class Id" />
+		
 	</label>
-	<g:datePicker name="classDate" precision="day"  value="${classInstance?.classDate}"  />
+	<g:textField name="classId" value="${classInstance?.classId}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: classInstance, field: 'classInstructor', 'error')} required">

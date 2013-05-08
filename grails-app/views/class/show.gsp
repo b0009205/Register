@@ -23,11 +23,11 @@
 			</g:if>
 			<ol class="property-list class">
 			
-				<g:if test="${classInstance?.classDate}">
+				<g:if test="${classInstance?.classId}">
 				<li class="fieldcontain">
-					<span id="classDate-label" class="property-label"><g:message code="class.classDate.label" default="Class Date" /></span>
+					<span id="classId-label" class="property-label"><g:message code="class.classId.label" default="Class Id" /></span>
 					
-						<span class="property-value" aria-labelledby="classDate-label"><g:formatDate date="${classInstance?.classDate}" /></span>
+						<span class="property-value" aria-labelledby="classId-label"><g:fieldValue bean="${classInstance}" field="classId"/></span>
 					
 				</li>
 				</g:if>
