@@ -28,13 +28,19 @@ def IMwA_course=Course.findByCourseId('w345') ?: new Course
 courseName:'Interactive Media with Animation', 
 courseYear:'2').save();
 
-def webarch_class=Class.findByClassName('Web Architecture') ?: new Class
+def webarch_class=Class.findByClassId('wa22') ?: new Class
 (classId:'wa22', 
 className:'Web Architecture').save();
 
-def vr_class=Class.findByClassName('Virtual Reality') ?: new Class
+def vr_class=Class.findByClassId('vr22') ?: new Class
 (classId:'vr22', 
 className:'Virtual Reality').save();
+
+def sophia_student=Instructor.findByStudentId('b0009205') ?: new Student
+(studentId:'b0009205', 
+studentName:'Sophia Kings', 
+studentYear:'2', 
+studentCourse:'IMwA').save();
 
 
     }
