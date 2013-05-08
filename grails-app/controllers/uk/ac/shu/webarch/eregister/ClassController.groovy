@@ -26,8 +26,6 @@ redirect(action: "list", params: params)
 withFormat {
 
 	html result
-	xml { render result as XML }
-	json { render result as JSON }
 
 	}
 
