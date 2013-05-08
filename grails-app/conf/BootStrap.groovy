@@ -28,7 +28,7 @@ className:'Web Architecture',
 classDate:'Monday@4',
 classInstructor: 'Ian Ibbotson').save();
 
-def vr_class=Class.findByClassId('vr22') ?: new Class
+def vr_class=Class.findByClassName('Virtual Reality') ?: new Class
 (classId:'vr22', 
 className:'Virtual Reality', 
 classDate:'Thursday@10',
