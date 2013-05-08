@@ -1,6 +1,7 @@
 package uk.ac.shu.webarch.eregister
 
 class Course {
+String courseId
 String courseName
 String courseYear
 
