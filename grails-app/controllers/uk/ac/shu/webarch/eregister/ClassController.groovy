@@ -11,23 +11,6 @@ class ClassController {
 def index() {
 
 redirect(action: "list", params: params)
-		def result =[:]
-		
-		result.classList = []
-
-		Class.findAll().each { cls ->
-			result.classList.add([instructorName:cls.classInstructor.name, 
-						courseName:cls.course.courseName, 
-						className:cls.name])
-		}
-			
-		
-
-withFormat {
-
-	html result
-
-	}
 
      }
 
