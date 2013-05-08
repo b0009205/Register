@@ -6,9 +6,32 @@ class ClassController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
-    def index() {
-        redirect(action: "list", params: params)
-    }
+  
+
+def index() {
+
+redirect(action: "list", params: params)
+		def result =[:]
+		
+		result.classList = []
+
+		Class.findAll().each { cls ->
+			result.classList.add([instructorName:cls.classInstructor.name, 
+						courseName:cls.course.courseName, 
+						className:cls.name])
+		}
+			
+		
+
+withFormat {
+
+	html result
+	xml { render result as XML }
+	json { render result as JSON }
+
+	}
+
+     }
 
     def list(Integer max) {
         params.max = Math.min(max ?: 10, 100)
