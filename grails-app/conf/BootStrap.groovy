@@ -22,11 +22,17 @@ def IMwA_course=Course.findByCourseId('w345') ?: new Course
 courseName:'Interactive Media with Animation', 
 courseYear:'2').save();
 
-def webArch_class=Class.findByClassId('wa22') ?: new Class
+def webarch_class=Class.findByClassId('wa22') ?: new Class
 (classId:'wa22', 
 className:'Web Architecture', 
 classDate:'Monday@4',
 classInstructor: 'Ian Ibbotson').save();
+
+def vr_class=Class.findByClassId('vr22') ?: new Class
+(classId:'vr22', 
+className:'Virtual Reality', 
+classDate:'Thursday@10',
+classInstructor: 'Penny Collier').save();
 
 
     }
