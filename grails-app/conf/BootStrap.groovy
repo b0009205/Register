@@ -36,7 +36,7 @@ def vr_class=Class.findByClassId('vr22') ?: new Class
 (classId:'vr22', 
 className:'Virtual Reality').save();
 
-def sophia_student=Instructor.findByStudentId('b0009205') ?: new Student
+def sophia_student=Student.findByStudentId('b0009205') ?: new Student
 (studentId:'b0009205', 
 studentName:'Sophia Kings', 
 studentYear:'2', 
