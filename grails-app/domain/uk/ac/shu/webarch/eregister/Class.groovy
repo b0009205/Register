@@ -4,7 +4,6 @@ class Class {
 String classId
 String className
 Instructor classInstructor
-
 Course courseClass
 
 Set classesEnrolled

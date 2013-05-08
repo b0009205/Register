@@ -32,10 +32,6 @@ def webarch_class=Class.findByClassId('9922') ?: new Class
 (classId:'9922', 
 className:'Web Architecture').save();
 
-def vr_class=Class.findByClassId('9122') ?: new Class
-(classId:'9122', 
-className:'Virtual Reality').save();
-
 def sophia_student=Student.findByStudentId('b0009205') ?: new Student
 (studentId:'b0009205', 
 studentName:'Sophia Kings', 
