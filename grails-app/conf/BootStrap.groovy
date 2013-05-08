@@ -24,15 +24,11 @@ courseYear:'2').save();
 
 def webarch_class=Class.findByClassId('wa22') ?: new Class
 (classId:'wa22', 
-className:'Web Architecture', 
-classDate:'Monday@4',
-classInstructor: 'Ian Ibbotson').save();
+className:'Web Architecture').save();
 
 def vr_class=Class.findByClassName('Virtual Reality') ?: new Class
 (classId:'vr22', 
-className:'Virtual Reality', 
-classDate:'Thursday@10',
-classInstructor: 'Penny Collier').save();
+className:'Virtual Reality').save();
 
 
     }
