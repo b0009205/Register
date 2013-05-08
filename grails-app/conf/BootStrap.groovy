@@ -23,17 +23,17 @@ instructorName:'Penny Collier',
 instructorRoom:'9327', 
 instructorTelephone:'01144275647').save();
 
-def IMwA_course=Course.findByCourseId('w345') ?: new Course
+def Imwa_course=Course.findByCourseId('w345') ?: new Course
 (courseId:'ima2', 
 courseName:'Interactive Media with Animation', 
 courseYear:'2').save();
 
-def webarch_class=Class.findByClassId('wa22') ?: new Class
-(classId:'wa22', 
+def webarch_class=Class.findByClassId('9922') ?: new Class
+(classId:'9922', 
 className:'Web Architecture').save();
 
-def vr_class=Class.findByClassId('vr22') ?: new Class
-(classId:'vr22', 
+def vr_class=Class.findByClassId('9122') ?: new Class
+(classId:'9122', 
 className:'Virtual Reality').save();
 
 def sophia_student=Student.findByStudentId('b0009205') ?: new Student
