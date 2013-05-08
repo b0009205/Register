@@ -17,12 +17,18 @@ instructorName:'Matthew Love',
 instructorRoom:'9327', 
 instructorTelephone:'011442753450').save();
 
+def penny_instructor=Instructor.findByInstructorId('235') ?: new Instructor
+(instructorId:'235', 
+instructorName:'Penny Collier', 
+instructorRoom:'9327', 
+instructorTelephone:'01144275647').save();
+
 def IMwA_course=Course.findByCourseId('w345') ?: new Course
 (courseId:'ima2', 
 courseName:'Interactive Media with Animation', 
 courseYear:'2').save();
 
-def webarch_class=Class.findByClassId('wa22') ?: new Class
+def webarch_class=Class.findByClassName('Web Architecture') ?: new Class
 (classId:'wa22', 
 className:'Web Architecture').save();
 
